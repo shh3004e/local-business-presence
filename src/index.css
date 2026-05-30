@@ -1,6 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #7b39fc;
+  --color-secondary: #2b2344;
+
+  --font-manrope: "Manrope", sans-serif;
+  --font-cabin: "Cabin", sans-serif;
+  --font-instrument: "'Instrument Serif'", serif;
+  --font-inter: "Inter", sans-serif;
+
+  --animate-fade-in: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-fast: fade-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -11,4 +33,5 @@
 body {
   background-color: #08060d; /* fallback dark background */
   overflow-x: hidden;
+  font-family: var(--font-inter);
 }
